@@ -11,7 +11,7 @@ const app= express() //creating express app
 const port= process.env.PORT //storing port number
 
 app.use(session({
-    secret: 'Suii Scribly',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
